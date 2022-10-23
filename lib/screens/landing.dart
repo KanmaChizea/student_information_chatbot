@@ -17,48 +17,15 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
-  final ScrollController _controller = ScrollController();
-  final FocusNode _focusNode = FocusNode();
-  static const Duration _duration = Duration(milliseconds: 30);
-
-  void _handleKeyEvent(RawKeyEvent event) {
-    var offset = _controller.offset;
-    if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
-      setState(() {
-        if (kReleaseMode) {
-          _controller.animateTo(offset - 200,
-              duration: _duration, curve: Curves.ease);
-        } else {
-          _controller.animateTo(offset - 200,
-              duration: _duration, curve: Curves.ease);
-        }
-      });
-    } else if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
-      setState(() {
-        if (kReleaseMode) {
-          _controller.animateTo(offset + 200,
-              duration: _duration, curve: Curves.ease);
-        } else {
-          _controller.animateTo(offset + 200,
-              duration: _duration, curve: Curves.ease);
-        }
-      });
-    }
-  }
-
-  @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
-  }
-
+  final _controller = ScrollController();
+  final _focusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: RawKeyboardListener(
-        autofocus: true,
         focusNode: _focusNode,
-        onKey: _handleKeyEvent,
+        autofocus: true,
+        onKey: _handleOnKey,
         child: SingleChildScrollView(
             controller: _controller,
             child: Column(
@@ -86,5 +53,57 @@ class _LandingPageState extends State<LandingPage> {
             )),
       ),
     );
+  }
+
+  void _handleOnKey(RawKeyEvent event) {
+    var offset = _controller.offset;
+    const duration = Duration(milliseconds: 30);
+    if (event.logicalKey == LogicalKeyboardKey.arrowUp) {
+      setState(() {
+        if (kReleaseMode) {
+          _controller.animateTo(offset - 100,
+              duration: duration, curve: Curves.ease);
+        } else {
+          _controller.animateTo(offset - 100,
+              duration: duration, curve: Curves.ease);
+        }
+      });
+    } else if (event.logicalKey == LogicalKeyboardKey.arrowDown) {
+      setState(() {
+        if (kReleaseMode) {
+          _controller.animateTo(offset + 100,
+              duration: duration, curve: Curves.ease);
+        } else {
+          _controller.animateTo(offset + 100,
+              duration: duration, curve: Curves.ease);
+        }
+      });
+    } else if (event.logicalKey == LogicalKeyboardKey.pageDown) {
+      setState(() {
+        if (kReleaseMode) {
+          _controller.animateTo(offset + 300,
+              duration: duration, curve: Curves.ease);
+        } else {
+          _controller.animateTo(offset + 300,
+              duration: duration, curve: Curves.ease);
+        }
+      });
+    } else if (event.logicalKey == LogicalKeyboardKey.pageUp) {
+      setState(() {
+        if (kReleaseMode) {
+          _controller.animateTo(offset - 300,
+              duration: duration, curve: Curves.ease);
+        } else {
+          _controller.animateTo(offset - 300,
+              duration: duration, curve: Curves.ease);
+        }
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
   }
 }
