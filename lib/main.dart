@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_information_chatbot/core/theme.dart';
+import 'package:student_information_chatbot/screens/chat.dart';
 
 import 'screens/landing.dart';
 
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: theme,
       title: 'Joe Chatbot',
-      home: const LandingPage(),
+      routes: {
+        '/': (context) => const LandingPage(),
+        '/chat': (context) => const ChatPage()
+      },
+      initialRoute: '/',
     );
   }
 }

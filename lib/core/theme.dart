@@ -33,6 +33,11 @@ TextTheme textTheme = const TextTheme(
       fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black87),
   headline4: TextStyle(
       fontSize: 24, fontWeight: FontWeight.w600, color: Colors.black87),
-  subtitle1: TextStyle(fontSize: 18, height: 1.2),
-  subtitle2: TextStyle(fontSize: 16, height: 1.2),
+  subtitle1: TextStyle(fontSize: 18, height: 1.2, fontWeight: FontWeight.w500),
+  subtitle2: TextStyle(fontSize: 16, height: 1.2, fontWeight: FontWeight.w500),
+  caption: TextStyle(
+      fontSize: 12,
+      height: 1.2,
+      fontWeight: FontWeight.w500,
+      color: Colors.white),
 );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:student_information_chatbot/core/responsive.dart';
 
 import 'hero_text.dart';
@@ -20,7 +21,7 @@ class HeroSection extends StatelessWidget {
             SizedBox(
                 height: MediaQuery.of(context).size.width / 3,
                 width: MediaQuery.of(context).size.width / 3,
-                child: Image.asset('hero.png', fit: BoxFit.contain))
+                child: SvgPicture.asset('hero.svg', fit: BoxFit.contain))
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/responsive.dart';
+import '../screens/chat.dart';
 
 class HelpSection extends StatelessWidget {
   const HelpSection({super.key});
@@ -29,7 +30,12 @@ class HelpSection extends StatelessWidget {
               : Theme.of(context).textTheme.bodyText2,
         ),
         const SizedBox(height: 24),
-        ElevatedButton(onPressed: () {}, child: const Text('GET STARTED'))
+        ElevatedButton(
+            onPressed: () => Navigator.of(context).pushNamed('/chat'),
+            child: Text('GET STARTED',
+                style: TextStyle(
+                    fontSize: isMobile(context) ? 16 : 18,
+                    color: Colors.white)))
       ],
     );
   }

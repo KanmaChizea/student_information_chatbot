@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:student_information_chatbot/core/responsive.dart';
 
 import 'package:student_information_chatbot/models/service.dart';
@@ -18,7 +19,8 @@ class ServiceCard extends StatelessWidget {
           isThreeLine: true,
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-          leading: Image.asset(service.iconPath),
+          leading:
+              SizedBox(width: 100, child: SvgPicture.asset(service.iconPath)),
           title: Text(service.title,
               style: isMobile(context)
                   ? Theme.of(context)

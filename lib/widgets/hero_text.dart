@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:student_information_chatbot/core/responsive.dart';
+import 'package:student_information_chatbot/screens/chat.dart';
+import 'package:student_information_chatbot/widgets/logo.dart';
 
 class HeroText extends StatelessWidget {
   const HeroText({
@@ -11,7 +14,7 @@ class HeroText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset('logo.png'),
+        const AppLogo(),
         const Spacer(),
         SizedBox(
           width: isMobile(context)
@@ -43,10 +46,11 @@ class HeroText extends StatelessWidget {
             )),
         const SizedBox(height: 36),
         ElevatedButton(
-            onPressed: () {},
-            child: const Text(
-              'TALK TO JOE',
-            )),
+            onPressed: () => Navigator.of(context).pushNamed('/chat'),
+            child: Text('TALK TO JOE',
+                style: TextStyle(
+                    fontSize: isMobile(context) ? 16 : 18,
+                    color: Colors.white))),
         const Spacer(),
       ],
     );
