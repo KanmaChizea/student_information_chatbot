@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:student_information_chatbot/data/scroll_controller_cubit.dart';
 import '../data/message_cubit.dart';
 
 import '../core/colors.dart';
@@ -24,7 +25,9 @@ class _ChatInputFieldState extends State<ChatInputField> {
   void _handleSubmission(String text) {
     _controller.clear();
     context.read<MessageCubit>().sendMessage(text);
+    context.read<ScrollControllerCubit>().updateScrollPosition();
     context.read<MessageCubit>().getResponse(text);
+    context.read<ScrollControllerCubit>().updateScrollPosition();
   }
 
   @override
@@ -34,6 +37,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
         Expanded(
           child: TextField(
             controller: _controller,
+            onSubmitted:(_)=> _handleSubmission(_controller.text),
             autofocus: true,
             showCursor: true,
             style: isMobile(context)
