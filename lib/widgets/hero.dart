@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:student_information_chatbot/core/responsive.dart';
+import '../core/responsive.dart';
 
 import 'hero_text.dart';
 

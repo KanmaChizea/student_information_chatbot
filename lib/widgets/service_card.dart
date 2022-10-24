@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:student_information_chatbot/core/responsive.dart';
+import '../core/responsive.dart';
 
-import 'package:student_information_chatbot/models/service.dart';
+import '../models/service.dart';
 
 class ServiceCard extends StatelessWidget {
   const ServiceCard({

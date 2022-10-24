@@ -4,6 +4,7 @@ import 'colors.dart';
 
 ThemeData theme = ThemeData(
     primaryColor: primary,
+    primarySwatch: Colors.purple,
     elevatedButtonTheme: ElevatedButtonThemeData(style: elevatedStyle),
     textTheme: textTheme);
 

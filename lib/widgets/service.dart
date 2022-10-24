@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:student_information_chatbot/core/constants.dart';
-import 'package:student_information_chatbot/widgets/service_card.dart';
+import '../core/constants.dart';
+import 'service_card.dart';
 
 import '../core/responsive.dart';
 

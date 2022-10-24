@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../core/responsive.dart';
-import '../screens/chat.dart';
 
 class HelpSection extends StatelessWidget {
   const HelpSection({super.key});

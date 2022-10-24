@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:student_information_chatbot/core/colors.dart';
-import 'package:student_information_chatbot/widgets/logo.dart';
+import '../core/colors.dart';
+import 'logo.dart';
 
 import '../core/responsive.dart';
 

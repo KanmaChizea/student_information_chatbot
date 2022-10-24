@@ -1,8 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:student_information_chatbot/core/colors.dart';
+import '../core/colors.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({

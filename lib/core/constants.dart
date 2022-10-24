@@ -1,4 +1,4 @@
-import 'package:student_information_chatbot/models/service.dart';
+import '../models/service.dart';
 
 List<ServiceModel> serviceList = [
   ServiceModel(

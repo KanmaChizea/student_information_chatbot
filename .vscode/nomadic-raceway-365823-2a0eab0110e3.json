@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nomadic-raceway-365823",
+  "private_key_id": "2a0eab0110e36462b989b77250a6f4763c29fde9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3IEecl2mx1D5i\nDYwdl5Z/tMFILedMmb4tOMHByJXsxBFz+uwsGMy3k20waHkiqDVT8v8Nd6BPxb4K\nuNgnIBiTQe5zAdPEEXzZ5WZKltvsc9XHJNmTz5uPkDl0tp+NnPKZybVPTBWBr62H\ntame/pzLiCJX/QM/tx0EeKbrVcl/0nHvTTyDjpmDKb/Q4KBl482wLLED+YIWEYga\n2BsrXPcWtBX/LEMr7tZ+8XXJQtSNfr31BkbnwMGOQ5/zn4bbCEG2HlwR2q7EJGwr\n8CUUQNCIxJI5BPrmyxL7JxBxr6SoD53rqxfNp4moC+K9PsAmNnwQ9HyOwB2i5nJ1\n46kiOy/7AgMBAAECggEAESzj+ouRXFGDRLzV8OqVF3ozcwEdkGfB2GNaRnVGA033\nMxdymJPLRsZ7HbV9JjzivFjUoIWhRNbpKZlHnXfOeXVCfe/kb2wsERKJowixX/56\neCVivZD7Tp46Y7hDKhi+M9VUZFETzU68UFE/mb8L1rBFRFcuVSBoBms7s8o458kc\n/6sPa6CqUCC5qfDYPOD+08kJZmaIcfNsPk2raddM9qf3hGgQXv3TRKj+LWbTxqnt\nfOwN05YA1qh2KKgr0zFXDwYuaDB5qqpDyFi/LNMaHzlLV+ymU1tVJEqmXsAGrL5P\nYtIZ1OydN2+/tLERpzWGRNZ7IWhCZY9kGu2+7itdnQKBgQDaa4G72LzAqeuJdFwG\nI1HxUJmZUS6AR8I1onhzyCVqfPfpvvy+xVogLfv8XStTA5t3h0QFwWkmszfu3+tG\nuzPDw4ChosOPbUNzwNUXwCjJgY5ewJydyDXKs80eLi1rDsLGOzBKhbO5iy73Agxw\ncIGeEFsnHmCg32La5/NhyU1QDQKBgQDWojmVeJvqN1zQ38Oc/+B53P73c+PddLRp\nStwaRi3dpEd2dw3P5gd65rtwnjUE2zXR7HfRifBZaTh/Dne4MaPth4Lzg6YQy0jf\na6mb/fMHflmw5MO2k2IwLQFEHYAkPAd/LU8IC71MNdQUzq0wV1YfS8nxYAWzn0SZ\nrX1AdUZ2JwKBgQDXdroyHmqE/Jp3rCujenA5RzNehTEEJsW0tyNvw/70/3ZoRZl6\nb6CqofI0T4yPhb11uiAmNVePb7g7kvS7f6xe75sS2EdmU3j41T7hARS7Q2y4l/Vn\nyLsXzSsJHLB9LcCCYJ0Qxrg2ztBzpreyq6mRzby96D+WMweHvszep//2eQKBgEMG\nshjda0M/Orr3xeyXc5Ba1TyNclFMCrL+77E8zUHz9WUnVKbh3OAigdJvdXsowavm\nvpwvCWHCnCQBbp2U0u5wbRKCwC9qbD1pL7RJH8XtTTESn5O6fuUwiL6uv7+RB35N\ntep7UAgmny5IRIleHMT1NAEuzVkEmbWsGfsxJGntAoGBAINnO671d2HHfQPa1TtC\neJfhSSoTj/uHz0sybsHVgCHwpAD8i6PP2YdgRGTA8J3HrHQZd23RUOkw1IKR+UUU\n2sKGy5xobsbKZtMl34v2Ye9aJ6x9NdtXlnGWmfdta7m1XKmu1JJi82BdzXQMLNca\nFPEUYGwWHI46CqSgNQg6afCb\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow@nomadic-raceway-365823.iam.gserviceaccount.com",
+  "client_id": "118096022539009856724",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow%40nomadic-raceway-365823.iam.gserviceaccount.com"
+}

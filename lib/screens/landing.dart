@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:student_information_chatbot/core/responsive.dart';
-import 'package:student_information_chatbot/widgets/footer.dart';
+import '../core/responsive.dart';
+import '../widgets/footer.dart';
 
 import '../widgets/about.dart';
 import '../widgets/help.dart';
