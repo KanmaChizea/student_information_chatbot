@@ -9,19 +9,8 @@ import '../core/responsive.dart';
 import '../widgets/chat_body.dart';
 import '../widgets/input_field.dart';
 
-class ChatPage extends StatefulWidget {
+class ChatPage extends StatelessWidget {
   const ChatPage({Key? key}) : super(key: key);
-
-  @override
-  State<ChatPage> createState() => _ChatPageState();
-}
-
-class _ChatPageState extends State<ChatPage> {
-  @override
-  void initState() {
-    context.read<MessageCubit>().getResponse('hi');
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +18,19 @@ class _ChatPageState extends State<ChatPage> {
       create: (context) => ScrollControllerCubit(),
       child: Scaffold(
         backgroundColor: const Color(0xFFECE5DD),
-        appBar: AppBar(title: const Text('JOE'), backgroundColor: primary),
+        appBar: AppBar(
+            title: Column(
+              children: [
+                const Text('JOE'),
+                if (context.watch<MessageCubit>().isTyping)
+                  Text('...typing', style: Theme.of(context).textTheme.caption)
+              ],
+            ),
+            // actions: [
+            //   if (context.watch<MessageCubit>().isTyping)
+            //     Text('...typing', style: Theme.of(context).textTheme.caption)
+            // ],
+            backgroundColor: primary),
         body: Padding(
           padding: isMobile(context)
               ? const EdgeInsets.symmetric(vertical: 24, horizontal: 16)

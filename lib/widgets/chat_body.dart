@@ -14,9 +14,9 @@ class ChatBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
         child: ListView.separated(
-          controller: context.read<ScrollControllerCubit>().state,
+      controller: context.read<ScrollControllerCubit>().state,
       padding: const EdgeInsets.all(8.0),
-      separatorBuilder: (context, index) => const SizedBox(height: 16),
+      separatorBuilder: (context, index) => const SizedBox(height: 32),
       itemBuilder: (context, index) =>
           MessageBubble(message: context.watch<MessageCubit>().state[index]),
       itemCount: context.watch<MessageCubit>().state.length,

@@ -1,13 +1,12 @@
 // ignore: import_of_legacy_library_into_null_safe
-import 'dart:developer';
-
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:student_information_chatbot/models/chat.dart';
 
+final str = {'hi': 'our'};
+
 class DialogFlowService {
   Future<ChatMessage?> getResponse(String query) async {
-    AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "credentials.json").build();
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: '.env').build();
 
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
