@@ -37,7 +37,10 @@ class _ChatInputFieldState extends State<ChatInputField> {
         Expanded(
           child: TextField(
             controller: _controller,
-            onSubmitted: (_) => _handleSubmission(_controller.text),
+            onSubmitted: (_) {
+              _handleSubmission(_controller.text);
+              FocusManager.instance.primaryFocus?.unfocus();
+            },
             autofocus: true,
             showCursor: true,
             style: isMobile(context)

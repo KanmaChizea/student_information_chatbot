@@ -6,7 +6,8 @@ final str = {'hi': 'our'};
 
 class DialogFlowService {
   Future<ChatMessage?> getResponse(String query) async {
-    AuthGoogle authGoogle = await AuthGoogle(fileJson: '.env').build();
+    AuthGoogle authGoogle =
+        await AuthGoogle(fileJson: 'credentials.json').build();
 
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);

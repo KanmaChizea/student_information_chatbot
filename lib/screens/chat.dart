@@ -26,10 +26,6 @@ class ChatPage extends StatelessWidget {
                   Text('...typing', style: Theme.of(context).textTheme.caption)
               ],
             ),
-            // actions: [
-            //   if (context.watch<MessageCubit>().isTyping)
-            //     Text('...typing', style: Theme.of(context).textTheme.caption)
-            // ],
             backgroundColor: primary),
         body: Padding(
           padding: isMobile(context)

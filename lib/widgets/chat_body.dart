@@ -14,6 +14,7 @@ class ChatBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
         child: ListView.separated(
+      keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
       controller: context.read<ScrollControllerCubit>().state,
       padding: const EdgeInsets.all(8.0),
       separatorBuilder: (context, index) => const SizedBox(height: 32),
