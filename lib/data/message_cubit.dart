@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dialogflow_service.dart';
 import '../models/chat.dart';
@@ -16,7 +13,8 @@ class MessageCubit extends Cubit<List<ChatMessage>> {
 
   sendMessage(String text) {
     if (text.isNotEmpty) {
-      emit(List.from(state)..add(ChatMessage(text: text, isSender: true)));
+      emit([...state, ChatMessage(text: text, isSender: true)]);
+
       isTyping = true;
     }
   }
@@ -25,7 +23,7 @@ class MessageCubit extends Cubit<List<ChatMessage>> {
     final newMessage = await dialogFlowService.getResponse(text);
 
     if (newMessage != null) {
-      emit(List.from(state)..add(newMessage));
+      emit([...state, newMessage]);
       isTyping = false;
     }
   }

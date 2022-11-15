@@ -1,33 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:student_information_chatbot/data/scroll_controller_cubit.dart';
-import '../data/message_cubit.dart';
 
 import '../core/colors.dart';
 import '../core/responsive.dart';
+import '../data/message_cubit.dart';
 
 class ChatInputField extends StatefulWidget {
-  const ChatInputField({super.key});
+  const ChatInputField({
+    Key? key,
+    required this.updateScroll,
+  }) : super(key: key);
 
+  final Function updateScroll;
   @override
   State<ChatInputField> createState() => _ChatInputFieldState();
 }
 
 class _ChatInputFieldState extends State<ChatInputField> {
   late TextEditingController _controller;
+  late Function updatescroll;
 
   @override
   void initState() {
     _controller = TextEditingController();
+    updatescroll = widget.updateScroll;
     super.initState();
   }
 
   void _handleSubmission(String text) {
     _controller.clear();
     context.read<MessageCubit>().sendMessage(text);
-    context.read<ScrollControllerCubit>().updateScrollPosition();
+    Future.delayed(const Duration(seconds: 3), () {
+      updatescroll();
+    });
     context.read<MessageCubit>().getResponse(text);
-    context.read<ScrollControllerCubit>().updateScrollPosition();
+    Future.delayed(const Duration(seconds: 5), () {
+      updatescroll();
+    });
   }
 
   @override
@@ -37,11 +46,9 @@ class _ChatInputFieldState extends State<ChatInputField> {
         Expanded(
           child: TextField(
             controller: _controller,
-            onSubmitted: (_) {
+            onSubmitted: (_) async {
               _handleSubmission(_controller.text);
-              FocusManager.instance.primaryFocus?.unfocus();
             },
-            autofocus: true,
             showCursor: true,
             style: isMobile(context)
                 ? Theme.of(context).textTheme.subtitle2
